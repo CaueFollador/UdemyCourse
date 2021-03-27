@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Aulas - Fundamentos/src"/>
+	<classpathentry kind="src" path="DesafioConversao/src"/>
+	<classpathentry kind="src" path="DesafioOperadoresAritmeticos/src"/>
+	<classpathentry kind="src" path="desafioVariaveisEConstantes/src"/>
+	<classpathentry kind="src" path="DesafioLogicos"/>
+	<classpathentry kind="src" path="DesafioCalculadora"/>
+	<classpathentry kind="src" path="ExerciciosFundamentos"/>
+	<classpathentry kind="output" path="Aulas - Fundamentos/bin"/>
+</classpath>
