@@ -11,10 +11,8 @@ public class DataTeste {
 		
 		Scanner entrada = new Scanner(System.in);
 		
-		Data d1 = new Data();
-		
 		System.out.println("Informe um ano: ");
-		d1.ano = entrada.nextInt();
+		int ano = entrada.nextInt();
 		
 		System.out.println("Informe um mês: ");
 		int mes = entrada.nextInt();
@@ -23,41 +21,41 @@ public class DataTeste {
 			System.out.println("Mês inválido!\nInforme um mês válido");
 			mes = entrada.nextInt();
 		}
-		d1.mes = mes;
 		
 		System.out.println("Informe um dia: ");
 		int dia = entrada.nextInt();
 		
-		if(d1.mes == 2 && dia >= 29) {
-			externo:
+		if(mes == 2 && dia >= 29) {
+			
 			while(dia >= 29) {
-				if(dia == 29 && d1.ano%4 == 0) {
-					break externo;
+				if(dia == 29 && ano%4 == 0) {
+					break;
 					
 				} else {
 					System.out.println("Dia inválido para esse mês.\nInforme um dia válido");
 					dia = entrada.nextInt();
 				}
 			}
-			d1.dia = dia;
 		
-		} else if((d1.mes % 2 == 0 && d1.mes <7 && dia >= 31) || (d1.mes % 2 == 1 && d1.mes > 7 && dia >= 31)) {
+		} else if((mes % 2 == 0 && mes <7 && dia >= 31) || (mes % 2 == 1 && mes > 7 && dia >= 31)) {
 			while(dia >= 31) {
 				System.out.println("Dia inválido para esse mês.\nInforme um dia válido");
 				dia = entrada.nextInt();
 			}
-			d1.dia = dia;
 		
 		} else if(dia > 31) {
 			while(dia > 31) {
 				System.out.println("Dia inválido.\nInforme um dia válido");
 				dia = entrada.nextInt();
 			}
-			d1.dia = dia;
 		}
-		d1.dia = dia;
-		
-		System.out.printf("Sua data é: %d/%d/%d",d1.dia,d1.mes,d1.ano);
+				
 		entrada.close();
+		
+		Data d1 = new Data(dia, mes, ano);
+		Data d2 = new Data();
+		
+		System.out.println(d1.formatarData());
+		System.out.println(d2.formatarData());
 	}
 }
